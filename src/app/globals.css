@@ -12,8 +12,16 @@ a {
 
 /* CSS variables */
 :root {
+  /* Colors */
   --accent: #f52929;
   --primary: #121212;
   --secondary: #fffafa;
   --light-shade-black: #1e1d1d;
+  --light-shade-white: rgba(255, 250, 250, 0.2);
+
+  /* Animation timing */
+  --link-transition-duration: 500ms;
+
+  /* Animation easing functions */
+  --expo-out: cubic-bezier(0.16, 1, 0.3, 1);
 }

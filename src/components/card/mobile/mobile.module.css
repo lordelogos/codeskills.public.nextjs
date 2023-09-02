@@ -1,0 +1,105 @@
+/* Card internals */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+  height: 130px;
+  background: var(--light-shade-black);
+  width: 100%;
+  transition: all 300ms;
+  z-index: 1;
+  position: relative;
+}
+
+.cardHeader .icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+  color: var(--accent);
+}
+
+.cardHeader .divisorClosed,
+.cardHeader .divisorOpen {
+  transition: all 300ms;
+  width: 10%;
+  height: 3px;
+  background: var(--light-shade-white);
+}
+
+.cardHeader .divisorOpen {
+  width: 0%;
+}
+
+.cardHeader .title {
+  transition: all 300ms;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  color: var(--secondary);
+}
+
+.cardBody {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: all 300ms;
+  transform: translateY(-100%);
+  opacity: 0;
+  position: relative;
+  z-index: 0;
+}
+
+.cardBody .description {
+  font-size: 16px;
+  letter-spacing: 0.64px;
+  color: var(--secondary);
+}
+
+.cardBody .showcase {
+  width: 100%;
+  height: 384px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Card container */
+.container {
+  width: 100%;
+  max-width: 673px;
+  height: 130px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Transitions */
+.container[data-state="open"] {
+  height: 672px;
+}
+
+.container[data-state="open"] .cardBody {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+/* Bg change and padding */
+.container[data-state="open"] .cardHeader {
+  background: #121212;
+  padding: 0px 20px;
+  height: 36px;
+}
+
+/* Divisor widths */
+.container[data-state="open"] .cardHeader .divisorOpen {
+  flex: 1;
+}
+
+.container[data-state="open"] .cardHeader .divisorClosed {
+  width: 0%;
+}
+
+/* Spacing in closed state */
+.container[data-state="open"] .cardHeader .title {
+  margin-left: 0px;
+}

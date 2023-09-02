@@ -1,16 +1,14 @@
+import { IconProps } from "@/core/types";
 import { FC } from "react";
 
-interface ArrowLinkProps {
-  size?: number;
-}
-
-export const ArrowLink: FC<ArrowLinkProps> = ({ size = 20 }) => {
+export const ArrowLink: FC<IconProps> = ({ size = 16, className }) => {
   const width = Math.round(size * (20 / 20));
 
   return (
     <svg
       width={width}
       height={size}
+      className={className}
       viewBox="0 0 20 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
