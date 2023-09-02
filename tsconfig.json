@@ -20,6 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
+      "@ui/*": ["./src/components/ui/*"],
       "@static/*": ["./public/static/*"],
     }
   },

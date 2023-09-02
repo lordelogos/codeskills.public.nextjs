@@ -1,9 +1,9 @@
+import { Link } from "@ui/link";
+import { ArrowLink } from "@ui/icons/arrow-link";
+import { CardProps } from "@/core/types";
+import { FC } from "react";
 import Image from "next/image";
 import styles from "./mobile.module.css";
-import Link from "@/components/link";
-import { ArrowLink } from "@/components/icons/arrow-link";
-import { FC } from "react";
-import { CardProps } from "@/core/types";
 
 export const CardMobile: FC<CardProps> = ({
   icon: Icon,

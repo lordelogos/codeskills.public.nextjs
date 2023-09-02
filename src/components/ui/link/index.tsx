@@ -8,7 +8,7 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   hoverDirection?: "vertical" | "horizontal";
 }
 
-const Link = forwardRef<HTMLAnchorElement, LinkProps>(
+export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (
     {
       children,
@@ -48,5 +48,4 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   )
 );
 
-export default Link;
 Link.displayName = "Link";

@@ -1,6 +1,13 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ComponentType } from "react";
 
+export type displayCard =
+  | "education"
+  | "support"
+  | "networking"
+  | "collaboration"
+  | "industry updates";
+
 export type IconProps = {
   size?: number;
   className?: string;

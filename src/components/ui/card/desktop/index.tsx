@@ -1,10 +1,9 @@
-import Image from "next/image";
-import education from "@static/education.jpg";
-import styles from "./desktop.module.css";
-import Link from "@/components/link";
-import { ArrowLink } from "@/components/icons/arrow-link";
-import { FC } from "react";
+import { Link } from "@ui/link";
+import { ArrowLink } from "@ui/icons/arrow-link";
 import { CardProps } from "@/core/types";
+import { FC } from "react";
+import Image from "next/image";
+import styles from "./desktop.module.css";
 
 export const CardDesktop: FC<CardProps> = ({
   icon: Icon,

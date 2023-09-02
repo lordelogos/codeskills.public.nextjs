@@ -66,6 +66,12 @@
   width: max-content;
 }
 
+@media screen and (max-width: 300px) {
+  .link {
+    width: 100%;
+  }
+}
+
 .outline {
   color: var(--secondary);
   border: 1px solid var(--secondary);

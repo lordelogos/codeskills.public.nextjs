@@ -6,7 +6,8 @@
   height: 130px;
   background: var(--light-shade-black);
   width: 100%;
-  transition: all 300ms;
+  transition: all;
+  transition-duration: var(--card-transition-duration);
   z-index: 1;
   position: relative;
 }
@@ -20,7 +21,8 @@
 
 .cardHeader .divisorClosed,
 .cardHeader .divisorOpen {
-  transition: all 300ms;
+  transition: all;
+  transition-duration: var(--card-transition-duration);
   width: 10%;
   height: 3px;
   background: var(--light-shade-white);
@@ -31,7 +33,8 @@
 }
 
 .cardHeader .title {
-  transition: all 300ms;
+  transition: margin-left;
+  transition-duration: var(--card-transition-duration);
   text-transform: uppercase;
   font-size: 20px;
   margin-right: 20px;
@@ -39,21 +42,38 @@
   color: var(--secondary);
 }
 
+@media screen and (max-width: 640px) {
+  .cardHeader .title {
+    font-size: 16px;
+    margin-right: 8px;
+    margin-left: 8px;
+    color: var(--secondary);
+  }
+
+  .cardHeader .icon {
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
 .cardBody {
   padding: 24px 20px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  transition: all 300ms;
+  transition: all;
+  transition-duration: var(--card-transition-duration);
   transform: translateY(-100%);
   opacity: 0;
   position: relative;
   z-index: 0;
+  cursor: default;
 }
 
 .cardBody .description {
   font-size: 16px;
-  letter-spacing: 0.64px;
+  letter-spacing: 4%;
   color: var(--secondary);
 }
 
@@ -67,7 +87,7 @@
 /* Card container */
 .container {
   width: 100%;
-  max-width: 673px;
+  /* max-width: 673px; */
   height: 130px;
   overflow: hidden;
   cursor: pointer;
