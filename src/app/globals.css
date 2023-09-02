@@ -1,0 +1,19 @@
+/* Style resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* CSS variables */
+:root {
+  --accent: #f52929;
+  --primary: #121212;
+  --secondary: #fffafa;
+  --light-shade-black: #1e1d1d;
+}
