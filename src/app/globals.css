@@ -75,6 +75,10 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+  .section {
+    padding: 70px 0;
+  }
+
   .title {
     font-size: 32px;
     line-height: 32px;
@@ -93,6 +97,11 @@ body {
   flex-direction: column;
   gap: 20px;
   max-width: 36ch;
+}
+
+.description p {
+  font-size: 16px;
+  line-height: 22.4px;
 }
 
 @media screen and (max-width: 1024px) {

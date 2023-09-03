@@ -13,6 +13,13 @@
   transition-timing-function: var(--expo-out);
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1120px) {
+  .img {
+    width: 350px;
+    height: 450px;
+  }
+}
+
 .cta {
   z-index: 5;
   background: var(--light-shade-black);
@@ -32,4 +39,21 @@
 
 .ctaIcon {
   transform: rotate(45deg);
+}
+
+@media screen and (max-width: 640px) {
+  .cta {
+    width: 80px;
+    height: 80px;
+  }
+
+  .container {
+    width: 302px;
+    height: 384px;
+  }
+
+  .img {
+    width: 302px;
+    height: 384px;
+  }
 }

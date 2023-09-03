@@ -6,6 +6,7 @@ import { useState, useMemo, useRef, useEffect, FC } from "react";
 import styles from "./stacked-image.module.css";
 import { Link } from "../link";
 import { ArrowLink } from "../icons/arrow-link";
+import { useMediaQuery } from "@/core/hooks";
 
 type StackedImageAnimationProps = {
   images: StaticImageData[];
@@ -16,6 +17,7 @@ export const StackedImageAnimation: FC<StackedImageAnimationProps> = ({
   images,
   activeIndex,
 }) => {
+  const { isMobile } = useMediaQuery();
   const size = useMemo(() => images.length, [images.length]);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -56,7 +58,7 @@ export const StackedImageAnimation: FC<StackedImageAnimationProps> = ({
         );
       })}
       <Link href="#" className={styles.cta} hoverDirection="horizontal">
-        <ArrowLink size={40} className={styles.ctaIcon} />
+        <ArrowLink size={isMobile ? 16 : 40} className={styles.ctaIcon} />
       </Link>
     </div>
   );

@@ -95,7 +95,7 @@
 
 /* Transitions */
 .container[data-state="open"] {
-  height: 672px;
+  height: 600px;
 }
 
 .container[data-state="open"] .cardBody {

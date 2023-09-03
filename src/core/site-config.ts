@@ -35,6 +35,10 @@ export const siteConfig: Metadata = {
       "Join the CodeSkills community for web development learning, networking, events, and more. Explore coding tutorials, programming resources, and connect with fellow developers.",
     creator: "@pauloe_me",
   },
-
   creator: "Paul Ehikhuemen",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
 };

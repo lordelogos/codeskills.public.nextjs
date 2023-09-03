@@ -27,11 +27,54 @@
 
 .description {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 22.4px;
   max-width: 50ch;
 }
 
 .container[data-active="true"] {
   padding-left: 40px;
   background: linear-gradient(90deg, #303030 1.42%, rgba(30, 29, 29, 0) 93.54%);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 28px 0;
+  }
+
+  .container[data-active="true"] {
+    padding-left: 28px;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 24px 0;
+  }
+
+  .container[data-active="true"] {
+    padding-left: 24px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
 }
