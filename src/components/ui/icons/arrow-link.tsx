@@ -18,9 +18,9 @@ export const ArrowLink: FC<IconProps> = ({ size = 16, className }) => {
           id="Vector"
           d="M5 15.8333L15.8333 5M15.8333 5V15.4M15.8333 5H5.43333"
           stroke="currentColor"
-          stroke-width="1.25"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.25"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
     </svg>

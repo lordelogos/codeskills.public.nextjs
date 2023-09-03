@@ -9,8 +9,16 @@
   height: 500px;
   object-fit: cover;
   position: absolute;
-  transition: z-index 0.6s ease, transform 0.6s ease;
-  transition-timing-function: var(--expo-out);
+  transition: z-index, transform;
+  transition-duration: var(--link-transition-duration);
+}
+
+.hoverLink {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1120px) {
@@ -20,33 +28,7 @@
   }
 }
 
-.cta {
-  z-index: 5;
-  background: var(--light-shade-black);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translate(-50%, -25%) rotate(-45deg);
-  border-radius: 50%;
-  border: solid 3px var(--accent);
-  color: var(--accent);
-}
-
-.ctaIcon {
-  transform: rotate(45deg);
-}
-
 @media screen and (max-width: 640px) {
-  .cta {
-    width: 80px;
-    height: 80px;
-  }
-
   .container {
     width: 302px;
     height: 384px;

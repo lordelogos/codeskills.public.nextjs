@@ -90,6 +90,7 @@
   overflow: hidden;
   transition: width;
   transition-duration: var(--card-transition-duration);
+  transition-timing-function: var(--expo-out);
   color: var(--secondary);
   cursor: pointer;
 }

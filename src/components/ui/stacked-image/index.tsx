@@ -7,6 +7,7 @@ import styles from "./stacked-image.module.css";
 import { Link } from "../link";
 import { ArrowLink } from "../icons/arrow-link";
 import { useMediaQuery } from "@/core/hooks";
+import { IconLink } from "../icon-link";
 
 type StackedImageAnimationProps = {
   images: StaticImageData[];
@@ -57,9 +58,9 @@ export const StackedImageAnimation: FC<StackedImageAnimationProps> = ({
           />
         );
       })}
-      <Link href="#" className={styles.cta} hoverDirection="horizontal">
-        <ArrowLink size={isMobile ? 16 : 40} className={styles.ctaIcon} />
-      </Link>
+      <div className={styles.hoverLink}>
+        <IconLink href="#" />
+      </div>
     </div>
   );
 };
