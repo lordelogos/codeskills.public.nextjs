@@ -12,36 +12,3 @@
     gap: 16px;
   }
 }
-
-.section {
-  display: flex;
-  flex-direction: column;
-  gap: 56px;
-}
-
-.title {
-  font-size: 48px;
-  line-height: 48px;
-  font-weight: 400;
-  color: var(--secondary);
-  max-width: 20ch;
-  letter-spacing: 2%;
-}
-
-.title span {
-  color: var(--accent);
-}
-
-@media screen and (max-width: 1024px) {
-  .title {
-    font-size: 36px;
-    line-height: 36px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .title {
-    font-size: 32px;
-    line-height: 32px;
-  }
-}

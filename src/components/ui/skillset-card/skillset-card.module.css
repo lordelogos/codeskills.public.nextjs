@@ -1,0 +1,37 @@
+.container {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    90deg,
+    rgba(48, 48, 48, 0) 1.42%,
+    rgba(30, 29, 29, 0) 93.54%
+  );
+  transition: all;
+  transition-duration: var(--card-transition-duration);
+  cursor: pointer;
+}
+
+.number {
+  margin-bottom: 4px;
+  font-size: 28px;
+  color: var(--white-fade);
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 50ch;
+}
+
+.container[data-active="true"] {
+  padding-left: 40px;
+  background: linear-gradient(90deg, #303030 1.42%, rgba(30, 29, 29, 0) 93.54%);
+}

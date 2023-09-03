@@ -23,6 +23,7 @@ a {
   --secondary: #fffafa;
   --light-shade-black: #1e1d1d;
   --light-shade-white: rgba(255, 250, 250, 0.2);
+  --white-fade: rgba(255, 250, 250, 0.35);
 
   /* Animation timing */
   --link-transition-duration: 500ms;
@@ -38,4 +39,70 @@ body {
   min-height: 100vh;
   height: 100%;
   background-color: var(--primary);
+  color: var(--secondary);
+}
+
+/* Shared styles */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 100px 0;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 400;
+  color: var(--secondary);
+  max-width: 20ch;
+  letter-spacing: 2%;
+}
+
+.header .title {
+  max-width: 13ch;
+}
+
+.title span {
+  color: var(--accent);
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 36ch;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+  }
+
+  .description {
+    gap: 12px;
+  }
 }

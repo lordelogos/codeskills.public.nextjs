@@ -65,17 +65,6 @@ const DisplayCards: Array<CardProps & { type: displayCard }> = [
   },
 ];
 
-export const FuelSuccess = () => {
-  return (
-    <section className={styles.section}>
-      <h2 className={styles.title}>
-        How we <span>fuel success</span> in web development
-      </h2>
-      <FuelSuccessCards />
-    </section>
-  );
-};
-
 const FuelSuccessCards = () => {
   const [displayCard, setDisplayCard] = useState<displayCard>("collaboration");
   const { isDesktop } = useMediaQuery();
@@ -110,5 +99,16 @@ const FuelSuccessCards = () => {
         />
       ))}
     </div>
+  );
+};
+
+export const FuelSuccess = () => {
+  return (
+    <section className={`section`}>
+      <h2 className={`title`}>
+        How we <span>fuel success</span> in web development
+      </h2>
+      <FuelSuccessCards />
+    </section>
   );
 };

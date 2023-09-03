@@ -58,7 +58,7 @@
 }
 
 .cardBody {
-  padding: 24px 20px;
+  padding: 24px 0px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -106,7 +106,7 @@
 /* Bg change and padding */
 .container[data-state="open"] .cardHeader {
   background: #121212;
-  padding: 0px 20px;
+  padding: 0px;
   height: 36px;
 }
 

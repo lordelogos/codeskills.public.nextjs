@@ -22,3 +22,13 @@ export type CardProps = {
   state?: "open" | "closed";
   onClick?: () => void;
 };
+
+export type SkillsetCardNumber = "01" | "02" | "03";
+
+export type SkillsetCardProps = {
+  number: SkillsetCardNumber;
+  title: string;
+  description: string;
+  isActive?: boolean;
+  setActive?: () => void;
+};

@@ -15,12 +15,13 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       hoverDirection = "vertical",
       type = "text",
       variant = "outline",
+      className,
       ...rest
     },
     ref
   ) => (
     <a
-      className={`${styles.link} ${
+      className={`${styles.link} ${className} ${
         variant === "accent" ? styles.accent : styles.outline
       }`}
       ref={ref}
