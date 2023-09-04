@@ -1,5 +1,5 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { ComponentType } from "react";
+import { ComponentType, ReactNode } from "react";
 
 export type displayCard =
   | "education"
@@ -31,4 +31,9 @@ export type SkillsetCardProps = {
   description: string;
   isActive?: boolean;
   setActive?: () => void;
+};
+
+export type FAQCard = {
+  question: string;
+  answer: string | TrustedHTML;
 };

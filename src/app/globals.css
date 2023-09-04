@@ -19,6 +19,7 @@ a {
 :root {
   /* Colors */
   --accent: #f52929;
+  --deep-accent: #d21111;
   --primary: #121212;
   --secondary: #fffafa;
   --light-shade-black: #1e1d1d;
@@ -27,7 +28,7 @@ a {
 
   /* Animation timing */
   --link-transition-duration: 500ms;
-  --card-transition-duration: 300ms;
+  --card-transition-duration: 400ms;
 
   /* Animation easing functions */
   --expo-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -44,6 +45,9 @@ body {
 
 /* Shared styles */
 .section {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 56px;

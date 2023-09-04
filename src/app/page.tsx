@@ -1,3 +1,4 @@
+import { FAQs } from "@/components/faqs";
 import styles from "./page.module.css";
 import { FuelSuccess } from "@/components/fuel-success";
 import { ShareInsights } from "@/components/share-insights";
@@ -9,6 +10,7 @@ export default function Home() {
       <FuelSuccess />
       <Skillset />
       <ShareInsights />
+      <FAQs />
     </main>
   );
 }

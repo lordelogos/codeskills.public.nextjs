@@ -1,0 +1,79 @@
+.section {
+  background: linear-gradient(
+      0deg,
+      rgba(18, 18, 18, 0.7) 0%,
+      rgba(18, 18, 18, 0.7) 100%
+    ),
+    url("/static/faq.webp"), lightgray 50% / cover no-repeat;
+  background-position: 50% 50%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.title {
+  max-width: 100%;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.faqs {
+  margin: auto;
+  width: 100%;
+  max-width: 1062px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* FAQ Cards */
+.faqCard {
+  background: var(--deep-accent);
+  border-radius: 6px;
+  transition: all 300ms;
+}
+
+.faqCardContainer {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: max-height;
+  transition-duration: var(--card-transition-duration);
+  transition-timing-function: var(--expo-out);
+}
+
+.faqHeader {
+  padding: 28px 32px;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faqHeader p {
+  width: 80%;
+}
+
+.faqBody {
+  padding: 28px 32px;
+  padding-top: 20px;
+}
+
+.faqBody a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 640px) {
+  .faqHeader .faqBody {
+    padding: 28px 20px;
+  }
+}
