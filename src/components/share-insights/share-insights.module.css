@@ -94,7 +94,8 @@
 }
 
 .gridItem2 h3,
-.gridItem3 h3 {
+.gridItem3 h3,
+.gridItem4 h3 {
   font-size: 32px;
   line-height: 32px;
   font-weight: 500;
@@ -119,9 +120,6 @@
 }
 
 .gridItem4 h3 {
-  font-size: 32px;
-  line-height: 32px;
-  font-weight: 400;
   max-width: 10ch;
 }
 
@@ -152,7 +150,8 @@
   }
 
   .gridItem2 h3,
-  .gridItem3 h3 {
+  .gridItem3 h3,
+  .gridItem4 h3 {
     font-size: 24px;
     line-height: 24px;
   }
@@ -179,9 +178,11 @@
   }
 
   .gridItem2 h3,
-  .gridItem h3 {
-    font-size: 16px;
-    line-height: 16px;
+  .gridItem3 h3,
+  .gridItem4 h3 {
+    max-width: 26ch;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   .gridItem2 p,

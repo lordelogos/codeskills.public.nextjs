@@ -3,11 +3,11 @@ import { Metadata } from "next";
 export const siteLinks = {
   main: "https://codeskills.dev",
   githubPersonal: "https://github.com/lordelogos",
-  githubOrg: "",
-  discord: "",
+  githubOrg: "https://github.com/codeskills-dev",
+  discord: "https://discord.gg/9VNpMr9v3Y",
+  blog: "https://blog.codeskills.dev/",
   whatsApp: "",
   communityForm: "",
-  blog: "",
 };
 
 export const siteConfig: Metadata = {
