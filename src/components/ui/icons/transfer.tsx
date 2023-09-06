@@ -13,7 +13,7 @@ export const Transfer: FC<IconProps> = ({ size = 16, className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="mingcute:transfer-fill" clip-path="url(#clip0_12_161)">
+      <g id="mingcute:transfer-fill" clipPath="url(#clip0_12_161)">
         <g id="Group">
           <path
             id="Vector"

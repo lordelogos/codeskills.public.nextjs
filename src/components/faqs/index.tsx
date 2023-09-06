@@ -6,6 +6,7 @@ import { Plus } from "@ui/icons/plus";
 import styles from "./faqs.module.css";
 import { FAQCard } from "@/core/types";
 
+// TODO: complete FAQs
 const faqCards: FAQCard[] = [
   {
     question: "How can I join this community?",

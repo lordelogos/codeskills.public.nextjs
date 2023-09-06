@@ -3,6 +3,8 @@ import styles from "./page.module.css";
 import { FuelSuccess } from "@/components/fuel-success";
 import { ShareInsights } from "@/components/share-insights";
 import { Skillset } from "@/components/skillset";
+import React from "react";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -11,6 +13,7 @@ export default function Home() {
       <Skillset />
       <ShareInsights />
       <FAQs />
+      <Footer />
     </main>
   );
 }
