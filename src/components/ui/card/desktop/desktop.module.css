@@ -100,7 +100,6 @@
   width: 100%;
   padding: 0px;
   height: 100%;
-  /* max-width: 673px; */
   position: absolute;
   overflow: hidden;
   transition: left;
@@ -117,7 +116,6 @@
 
 /* Transitions */
 .container[data-state="open"] {
-  /* width: 600px; */
   flex-grow: 1;
 }
 
@@ -128,4 +126,10 @@
 .container[data-state="open"] .cardHeader {
   width: 0px;
   opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: none;
+  }
 }

@@ -50,7 +50,11 @@ export const ShareInsights = () => {
             <p>Over 20+ articles</p>
             <h3>See all articles</h3>
           </div>
-          <IconLink href={siteLinks.blog} className={styles.hoverLink} />
+          <IconLink
+            label="See more articles on codeskills blog"
+            href={siteLinks.blog}
+            className={styles.hoverLink}
+          />
         </div>
       </div>
     </section>

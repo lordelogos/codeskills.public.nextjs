@@ -29,13 +29,28 @@ export const Footer = () => {
         <BrandIcon />
         <p>&copy; Codeskills, {currentYear}</p>
         <div>
-          <a href={siteLinks.whatsApp} target="_blank" className={styles.link}>
+          <a
+            href={siteLinks.whatsApp}
+            target="_blank"
+            aria-label="Open codeskills whatsapp"
+            className={styles.link}
+          >
             <Whatsapp />
           </a>
-          <a href={siteLinks.discord} target="_blank" className={styles.link}>
+          <a
+            href={siteLinks.discord}
+            target="_blank"
+            aria-label="Open codeskills discord"
+            className={styles.link}
+          >
             <Discord />
           </a>
-          <a href={siteLinks.githubOrg} target="_blank" className={styles.link}>
+          <a
+            href={siteLinks.githubOrg}
+            target="_blank"
+            aria-label="Open codeskills github"
+            className={styles.link}
+          >
             <Github />
           </a>
         </div>

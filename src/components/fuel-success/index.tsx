@@ -4,7 +4,6 @@ import { CardDesktop } from "@ui/card/desktop";
 import { Pen } from "@ui/icons/pen";
 import { CardMobile } from "@ui/card/mobile";
 import { CardProps, displayCard } from "@/core/types";
-import { useMediaQuery } from "@/core/hooks";
 import { Help } from "@ui/icons/help";
 import { Transfer } from "@ui/icons/transfer";
 import { Update } from "@ui/icons/update";
@@ -66,30 +65,22 @@ const DisplayCards: Array<CardProps & { type: displayCard }> = [
 ];
 
 const FuelSuccessCards = () => {
-  const [displayCard, setDisplayCard] = useState<displayCard>("collaboration");
-  const { isDesktop } = useMediaQuery();
+  const [displayCard, setDisplayCard] = useState<displayCard>("education");
 
   const handleDisplayCard = (card: displayCard) => {
     setDisplayCard(card);
   };
 
-  if (!isDesktop) {
-    return (
-      <div className={styles.container}>
-        {DisplayCards.map((o, i) => (
-          <CardMobile
-            key={i}
-            onClick={() => handleDisplayCard(o.type)}
-            state={displayCard === o.type ? "open" : "closed"}
-            {...o}
-          />
-        ))}
-      </div>
-    );
-  }
-
   return (
     <div className={styles.container}>
+      {DisplayCards.map((o, i) => (
+        <CardMobile
+          key={i}
+          onClick={() => handleDisplayCard(o.type)}
+          state={displayCard === o.type ? "open" : "closed"}
+          {...o}
+        />
+      ))}
       {DisplayCards.map((o, i) => (
         <CardDesktop
           key={i}

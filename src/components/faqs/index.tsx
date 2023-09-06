@@ -5,35 +5,38 @@ import { Minus } from "@ui/icons/minus";
 import { Plus } from "@ui/icons/plus";
 import { FC, useEffect, useRef, useState } from "react";
 import styles from "./faqs.module.css";
+import { siteLinks } from "@/core/site-config";
 
-// TODO: complete FAQs
 const faqCards: FAQCard[] = [
   {
     question: "How can I join this community?",
     answer: `Becoming a part of our community is a breeze, 
-      <a href="#">Click here</a>
+      <a tabindex="-1" href=${siteLinks.communityForm}>Click here</a>
      and fill the form to complete the registration process.`,
   },
   {
     question: "Are there any requirements to join the community",
-    answer: "",
+    answer:
+      "No, there are no specific requirements to join our community. We welcome individuals of all levels, whether you're a complete beginner or an experienced coder. Our goal is to create an inclusive space where everyone can learn and collaborate.",
   },
   {
     question: "Can I join the community if I'm a beginner in web development",
-    answer: "",
+    answer:
+      "Absolutely! Our community is open to beginners in web development. We provide resources and support tailored to individuals at all skill levels. Whether you're just starting your journey or looking to advance your skills, you'll find a supportive environment here.",
   },
   {
     question:
       "Is there a cost to join the community or participate in the sessions",
-    answer: "",
+    answer:
+      "No, there is no cost associated with joining our community or participating in any of our sessions. We are committed to providing free access to learning materials, events, and networking opportunities. Our aim is to make coding education and community engagement accessible to everyone.",
   },
   {
     question: "What kind of activities and events are offered in the community",
-    answer: "",
+    answer: `Our community offers a diverse range of activities like Learning tutorials, coding challenges, projects, Interview preparation sessions, webinars, and workshops, networking opportunities, mentorship programs`,
   },
 ];
 
-const FAQCard: FC<FAQCard> = ({ question, answer }) => {
+const FAQCard: FC<FAQCard & { id: number }> = ({ question, answer, id }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [componentHeight, setComponentHeight] = useState(0);
   const answerRef = useRef<HTMLDivElement>(null);
@@ -66,20 +69,33 @@ const FAQCard: FC<FAQCard> = ({ question, answer }) => {
   }, [isExpanded]);
 
   return (
-    <div className={styles.faqCard} data-expanded={isExpanded}>
+    <li className={styles.faqCard} data-expanded={isExpanded}>
       <div
         className={styles.faqCardContainer}
         style={{ maxHeight: `${componentHeight}px` }}
       >
-        <div className={styles.faqHeader} onClick={handleClick} ref={headerRef}>
+        <div
+          className={styles.faqHeader}
+          onClick={handleClick}
+          ref={headerRef}
+          role={"button"}
+          aria-expanded={isExpanded}
+          aria-controls={`content-${id}`}
+        >
           <p>{question}</p>
           {isExpanded ? <Minus size={24} /> : <Plus size={24} />}
         </div>
-        <div className={styles.faqBody} ref={answerRef}>
+        <div
+          tabIndex={-1}
+          className={styles.faqBody}
+          ref={answerRef}
+          aria-hidden={!isExpanded}
+          id={`content-${id}`}
+        >
           <p dangerouslySetInnerHTML={{ __html: answer }}></p>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 
@@ -95,11 +111,14 @@ export const FAQs = () => {
             You will find answers to the questions we get asked the most
           </p>
         </div>
-        <div className={styles.faqs}>
+        <ul
+          className={styles.faqs}
+          aria-label="Codeskills frequently asked questions"
+        >
           {faqCards.map((o, i) => (
-            <FAQCard key={i} {...o} />
+            <FAQCard key={i} id={i} {...o} />
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

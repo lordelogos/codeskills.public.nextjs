@@ -123,3 +123,9 @@
 .container[data-state="open"] .cardHeader .title {
   margin-left: 0px;
 }
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: none;
+  }
+}

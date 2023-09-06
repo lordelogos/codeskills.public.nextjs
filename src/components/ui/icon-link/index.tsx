@@ -6,14 +6,17 @@ import { ArrowLink } from "../icons/arrow-link";
 export const IconLink = ({
   href,
   className,
+  label,
 }: {
   href: string;
   className?: string;
+  label?: string;
 }) => {
   const { isMobile } = useMediaQuery();
   return (
     <Link
       href={href}
+      aria-label={label}
       className={`${styles.cta} ${className}`}
       hoverDirection="horizontal"
     >

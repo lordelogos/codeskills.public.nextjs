@@ -8,6 +8,7 @@ import { Link } from "../link";
 import { ArrowLink } from "../icons/arrow-link";
 import { useMediaQuery } from "@/core/hooks";
 import { IconLink } from "../icon-link";
+import { siteLinks } from "@/core/site-config";
 
 type StackedImageAnimationProps = {
   images: StaticImageData[];
@@ -59,7 +60,10 @@ export const StackedImageAnimation: FC<StackedImageAnimationProps> = ({
         );
       })}
       <div className={styles.hoverLink}>
-        <IconLink href="#" />
+        <IconLink
+          href={siteLinks.communityForm}
+          label="Join the codeskills community"
+        />
       </div>
     </div>
   );
