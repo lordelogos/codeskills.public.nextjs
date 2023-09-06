@@ -1,10 +1,10 @@
 import { siteLinks } from "@/core/site-config";
-import { BrandIcon } from "../ui/brand-icon";
-import { ArrowLink } from "../ui/icons/arrow-link";
-import { Discord } from "../ui/icons/discord";
-import { Github } from "../ui/icons/github";
-import { Whatsapp } from "../ui/icons/whatsapp";
-import { Link } from "../ui/link";
+import { BrandIcon } from "@ui/brand-icon";
+import { ArrowLink } from "@ui/icons/arrow-link";
+import { Discord } from "@ui/icons/discord";
+import { Github } from "@ui/icons/github";
+import { Whatsapp } from "@ui/icons/whatsapp";
+import { Link } from "@ui/link";
 import styles from "./footer.module.css";
 
 export const Footer = () => {

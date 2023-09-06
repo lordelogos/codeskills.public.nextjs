@@ -1,15 +1,15 @@
 "use client";
 
 import { Link } from "@ui/link";
-import styles from "./skillset.module.css";
 import { ArrowLink } from "@ui/icons/arrow-link";
 import { SkillsetCard } from "@ui/skillset-card";
 import { SkillsetCardNumber, SkillsetCardProps } from "@/core/types";
 import frontendDevelopment from "@static/frontend.jpg";
 import responsiveDesign from "@static/responsive-design.jpg";
-import uiUx from "@static/ui-ux.jpg";
-import { useState } from "react";
 import { StackedImageAnimation } from "@ui/stacked-image";
+import { useState } from "react";
+import uiUx from "@static/ui-ux.jpg";
+import styles from "./skillset.module.css";
 
 const DisplayCards: Array<SkillsetCardProps> = [
   {

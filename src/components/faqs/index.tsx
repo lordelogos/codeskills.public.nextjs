@@ -1,10 +1,10 @@
 "use client";
 
-import { FC, useEffect, useRef, useState } from "react";
+import { FAQCard } from "@/core/types";
 import { Minus } from "@ui/icons/minus";
 import { Plus } from "@ui/icons/plus";
+import { FC, useEffect, useRef, useState } from "react";
 import styles from "./faqs.module.css";
-import { FAQCard } from "@/core/types";
 
 // TODO: complete FAQs
 const faqCards: FAQCard[] = [

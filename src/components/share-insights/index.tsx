@@ -2,9 +2,9 @@
 
 import { ArrowLink } from "@ui/icons/arrow-link";
 import { Link } from "@ui/link";
-import styles from "./share-insights.module.css";
-import { IconLink } from "../ui/icon-link";
+import { IconLink } from "@ui/icon-link";
 import { siteLinks } from "@/core/site-config";
+import styles from "./share-insights.module.css";
 
 export const ShareInsights = () => {
   const currentDate = new Date().getFullYear();
