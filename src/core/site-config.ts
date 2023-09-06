@@ -6,6 +6,8 @@ export const siteLinks = {
   githubOrg: "",
   discord: "",
   whatsApp: "",
+  communityForm: "",
+  blog: "",
 };
 
 export const siteConfig: Metadata = {

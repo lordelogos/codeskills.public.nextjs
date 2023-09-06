@@ -4,6 +4,7 @@ import { ArrowLink } from "@ui/icons/arrow-link";
 import { Link } from "@ui/link";
 import styles from "./share-insights.module.css";
 import { IconLink } from "../ui/icon-link";
+import { siteLinks } from "@/core/site-config";
 
 export const ShareInsights = () => {
   const currentDate = new Date().getFullYear();
@@ -18,7 +19,7 @@ export const ShareInsights = () => {
             Gain knowledge, stay current, and get inspired by our diverse
             articles.
           </p>
-          <Link href="#">
+          <Link href={siteLinks.blog}>
             <span>View blog</span>
             <ArrowLink />
           </Link>
@@ -49,7 +50,7 @@ export const ShareInsights = () => {
             <p>Over 20+ articles</p>
             <h3>See all articles</h3>
           </div>
-          <IconLink href="#" className={styles.hoverLink} />
+          <IconLink href={siteLinks.blog} className={styles.hoverLink} />
         </div>
       </div>
     </section>

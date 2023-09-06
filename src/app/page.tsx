@@ -8,12 +8,14 @@ import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
-    <main className={styles.body}>
+    <main className={styles.main}>
       <FuelSuccess />
       <Skillset />
       <ShareInsights />
-      <FAQs />
-      <Footer />
+      <div className={styles.grid}>
+        <FAQs />
+        <Footer />
+      </div>
     </main>
   );
 }

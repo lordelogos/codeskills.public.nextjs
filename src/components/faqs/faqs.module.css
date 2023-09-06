@@ -1,12 +1,23 @@
-.section {
-  background: linear-gradient(
-      0deg,
-      rgba(18, 18, 18, 0.7) 0%,
-      rgba(18, 18, 18, 0.7) 100%
-    ),
-    url("/static/faq.webp"), lightgray 50% / cover no-repeat;
-  background-position: 50% 50%;
+/* .section::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/grid-line.svg");
+  z-index: -1;
 }
+
+.section {
+  position: relative;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.8) 70%
+  );
+  background-size: cover;
+} */
 
 .header {
   display: flex;

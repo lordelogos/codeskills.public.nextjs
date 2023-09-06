@@ -11,7 +11,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <>
+    <div className={styles.grid}>
       <section className={`section ${styles.container}`}>
         <h2 className={styles.title}>
           Unlock the secrets of <span>web development</span> with our community
@@ -20,7 +20,7 @@ export const Footer = () => {
           Dive into the world of web development as we uncover its mysteries
           together
         </p>
-        <Link href="#" variant="accent">
+        <Link href={siteLinks.communityForm} variant="accent">
           <span>Join our community</span>
           <ArrowLink />
         </Link>
@@ -40,6 +40,6 @@ export const Footer = () => {
           </a>
         </div>
       </footer>
-    </>
+    </div>
   );
 };

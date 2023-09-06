@@ -4,6 +4,7 @@ import { CardProps } from "@/core/types";
 import { FC } from "react";
 import Image from "next/image";
 import styles from "./desktop.module.css";
+import { siteLinks } from "@/core/site-config";
 
 export const CardDesktop: FC<CardProps> = ({
   icon: Icon,
@@ -23,7 +24,7 @@ export const CardDesktop: FC<CardProps> = ({
           <div className={styles.divisor}></div>
         </div>
         <p className={styles.description}>{description}</p>
-        <Link href="#">
+        <Link href={siteLinks.communityForm}>
           <span>Join our community</span>
           <ArrowLink />
         </Link>
