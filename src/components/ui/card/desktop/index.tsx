@@ -24,7 +24,11 @@ export const CardDesktop: FC<CardProps> = ({
           <div className={styles.divisor}></div>
         </div>
         <p className={styles.description}>{description}</p>
-        <Link href={siteLinks.communityForm}>
+        <Link
+          href={siteLinks.communityForm}
+          aria-label="join the codeskills community"
+          tabIndex={state === "open" ? 0 : -1}
+        >
           <span>Join our community</span>
           <ArrowLink />
         </Link>

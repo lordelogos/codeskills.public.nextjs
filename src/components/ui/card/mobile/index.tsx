@@ -25,7 +25,11 @@ export const CardMobile: FC<CardProps> = ({
       </div>
       <div className={styles.cardBody}>
         <p className={styles.description}>{description}</p>
-        <Link href={siteLinks.communityForm}>
+        <Link
+          href={siteLinks.communityForm}
+          aria-label="join the codeskills community"
+          tabIndex={state === "open" ? 0 : -1}
+        >
           <span>Join our community</span>
           <ArrowLink />
         </Link>

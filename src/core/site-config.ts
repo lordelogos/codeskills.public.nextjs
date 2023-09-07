@@ -6,8 +6,8 @@ export const siteLinks = {
   githubOrg: "https://github.com/codeskills-dev",
   discord: "https://discord.gg/9VNpMr9v3Y",
   blog: "https://blog.codeskills.dev/",
-  whatsApp: "",
-  communityForm: "",
+  whatsApp: "#",
+  communityForm: "#",
 };
 
 export const siteConfig: Metadata = {
