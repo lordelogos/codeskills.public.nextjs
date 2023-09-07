@@ -1,4 +1,5 @@
 .container {
+  width: max-content;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -11,10 +12,17 @@
 
 .container span {
   font-size: 28px;
+  color: var(--secondary);
+  transition: color var(--link-transition-duration);
+  transition-timing-function: var(--expo-out);
 }
 
 @media screen and (max-width: 1024px) {
   .container span {
     font-size: 24px;
   }
+}
+
+.container:hover span {
+  color: var(--accent);
 }

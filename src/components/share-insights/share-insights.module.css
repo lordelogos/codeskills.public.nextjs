@@ -39,6 +39,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+  background: var(--light-shade-black);
   background: linear-gradient(
       0deg,
       rgba(18, 18, 18, 0.3) 0%,
@@ -106,7 +107,6 @@
   grid-column: span 1;
   height: 340px;
   background: var(--light-shade-black);
-  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
