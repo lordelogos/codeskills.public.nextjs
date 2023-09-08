@@ -89,6 +89,7 @@
   display: flex;
   overflow: hidden;
   transition: width;
+  will-change: width;
   transition-duration: var(--card-transition-duration);
   transition-timing-function: var(--expo-out);
   color: var(--secondary);
@@ -103,6 +104,7 @@
   position: absolute;
   overflow: hidden;
   transition: left;
+  will-change: left;
   transition-duration: var(--card-transition-duration);
   left: 100%;
 }
@@ -110,7 +112,8 @@
 .cardHeader {
   width: 140px;
   opacity: 1;
-  transition: all, opacity;
+  transition: width, opacity;
+  will-change: width, opacity;
   transition-duration: var(--card-transition-duration);
 }
 

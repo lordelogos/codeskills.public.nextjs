@@ -14,6 +14,7 @@
   font-size: 28px;
   color: var(--secondary);
   transition: color var(--link-transition-duration);
+  will-change: color;
   transition-timing-function: var(--expo-out);
 }
 

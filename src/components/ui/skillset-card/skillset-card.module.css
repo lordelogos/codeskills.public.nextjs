@@ -2,12 +2,12 @@
   padding: 40px 0;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
+  background-image: linear-gradient(
     90deg,
     rgba(48, 48, 48, 0) 1.42%,
     rgba(30, 29, 29, 0) 93.54%
   );
-  transition: all;
+  transition: background-image, padding-left;
   transition-duration: var(--card-transition-duration);
   cursor: pointer;
 }
@@ -33,7 +33,11 @@
 
 .container[data-active="true"] {
   padding-left: 40px;
-  background: linear-gradient(90deg, #303030 1.42%, rgba(30, 29, 29, 0) 93.54%);
+  background-image: linear-gradient(
+    90deg,
+    #303030 1.42%,
+    rgba(30, 29, 29, 0) 93.54%
+  );
 }
 
 @media screen and (max-width: 1024px) {

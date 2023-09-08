@@ -4,9 +4,10 @@
   align-items: center;
   padding: 40px 20px;
   height: 130px;
-  background: var(--light-shade-black);
+  background-color: var(--light-shade-black);
   width: 100%;
-  transition: all;
+  transition: background-color, padding, height;
+  will-change: background-color, padding, height;
   transition-duration: var(--card-transition-duration);
   z-index: 1;
   position: relative;
@@ -34,6 +35,7 @@
 
 .cardHeader .title {
   transition: margin-left;
+  will-change: margin-left;
   transition-duration: var(--card-transition-duration);
   text-transform: uppercase;
   font-size: 20px;
@@ -62,7 +64,8 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  transition: all;
+  transition: transform, opacity;
+  will-change: transform, opacity;
   transition-duration: var(--card-transition-duration);
   transform: translateY(-100%);
   opacity: 0;
@@ -105,7 +108,7 @@
 
 /* Bg change and padding */
 .container[data-state="open"] .cardHeader {
-  background: #121212;
+  background-color: #121212;
   padding: 0px;
   height: 36px;
 }

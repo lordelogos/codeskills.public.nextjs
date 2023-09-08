@@ -10,6 +10,7 @@
   object-fit: cover;
   position: absolute;
   transition: z-index, transform;
+  will-change: z-index, transform;
   transition-duration: var(--link-transition-duration);
 }
 

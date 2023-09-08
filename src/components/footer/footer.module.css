@@ -60,6 +60,7 @@
 
 .footer .link {
   transition: color;
+  will-change: color;
   transition-duration: var(--link-transition-duration);
   transition-timing-function: var(--expo-out);
 }

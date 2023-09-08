@@ -12,6 +12,7 @@
 .text,
 .hoverText {
   transition: transform;
+  will-change: transform;
   transition-duration: var(--link-transition-duration);
   transition-timing-function: var(--expo-out);
   display: flex;

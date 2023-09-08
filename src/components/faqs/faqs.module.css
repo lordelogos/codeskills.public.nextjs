@@ -32,7 +32,6 @@
 .faqCard {
   background: var(--deep-accent);
   border-radius: 6px;
-  transition: all 300ms;
 }
 
 .faqCardContainer {
@@ -40,6 +39,7 @@
   flex-direction: column;
   overflow: hidden;
   transition: max-height;
+  will-change: max-height;
   transition-duration: var(--card-transition-duration);
   transition-timing-function: var(--expo-out);
 }
