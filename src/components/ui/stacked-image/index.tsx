@@ -1,14 +1,10 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
-import { useState, useMemo, useRef, useEffect, FC } from "react";
-
-import styles from "./stacked-image.module.css";
-import { Link } from "../link";
-import { ArrowLink } from "../icons/arrow-link";
-import { useMediaQuery } from "@/core/hooks";
-import { IconLink } from "../icon-link";
 import { siteLinks } from "@/core/site-config";
+import Image, { StaticImageData } from "next/image";
+import { useMemo, useRef, FC } from "react";
+import styles from "./stacked-image.module.css";
+import { IconLink } from "../icon-link";
 
 type StackedImageAnimationProps = {
   images: StaticImageData[];

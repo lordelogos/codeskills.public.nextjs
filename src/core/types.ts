@@ -1,5 +1,5 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { ComponentType, ReactNode } from "react";
+import { ComponentType } from "react";
 
 export type displayCard =
   | "education"
@@ -23,7 +23,7 @@ export type CardProps = {
   onClick?: () => void;
 };
 
-export type SkillsetCardNumber = "01" | "02" | "03";
+export type SkillsetCardNumber = 1 | 2 | 3;
 
 export type SkillsetCardProps = {
   number: SkillsetCardNumber;

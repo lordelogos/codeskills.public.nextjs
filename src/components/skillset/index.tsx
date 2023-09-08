@@ -13,19 +13,19 @@ import styles from "./skillset.module.css";
 
 const DisplayCards: Array<SkillsetCardProps> = [
   {
-    number: "01",
+    number: 1,
     title: "Frontend Development",
     description:
       "Learn the art of creating engaging user interfaces and seamless user experiences through HTML, CSS, and JavaScript.",
   },
   {
-    number: "02",
+    number: 2,
     title: "Responsive Design",
     description:
       "Gain expertise in developing websites that adapt and function seamlessly across different devices and screen sizes.",
   },
   {
-    number: "03",
+    number: 3,
     title: "UI/UX Design",
     description:
       "Craft intuitive and visually captivating user interfaces that prioritize the needs and goals of the end-users.",
@@ -33,7 +33,7 @@ const DisplayCards: Array<SkillsetCardProps> = [
 ];
 
 export const Skillset = () => {
-  const [activeCard, setActiveCard] = useState<SkillsetCardNumber>("02");
+  const [activeCard, setActiveCard] = useState<SkillsetCardNumber>(2);
 
   return (
     <section className={`section`}>
@@ -66,8 +66,7 @@ export const Skillset = () => {
         <div className={styles.images}>
           <StackedImageAnimation
             images={[uiUx, frontendDevelopment, responsiveDesign]}
-            // TODO: fix this mess
-            activeIndex={activeCard === "01" ? 1 : activeCard === "02" ? 2 : 3}
+            activeIndex={activeCard}
           />
         </div>
       </div>

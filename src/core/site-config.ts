@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+// TODO: complete links
 export const siteLinks = {
   main: "https://codeskills.dev",
   githubPersonal: "https://github.com/lordelogos",
