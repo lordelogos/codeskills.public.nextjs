@@ -1,5 +1,12 @@
-.section {
+.container {
   padding: 40px 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.section {
   min-height: calc(100vh - 80px);
   min-height: calc(100svh - 80px);
   display: flex;

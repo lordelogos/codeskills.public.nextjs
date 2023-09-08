@@ -1,0 +1,70 @@
+.container {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-attachment: fixed;
+}
+
+.gradientDiv {
+  --borderWidth: 2px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 80%;
+  width: 80%;
+  background: blue;
+  background: #1d1f20;
+  border-radius: var(--borderWidth);
+}
+
+.gradientDiv::after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    60deg,
+    rgba(245, 41, 41, 1) 0%,
+    rgba(245, 41, 41, 1) 25%,
+    rgba(255, 152, 152, 1) 50%,
+    rgba(255, 195, 195, 1) 75%,
+    rgba(217, 217, 217, 1) 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0px 0px 100px 0px rgba(245, 41, 41, 0.6);
+  z-index: -1;
+  animation: animatedgradient 5s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.div1 {
+  top: -32%;
+  left: -60%;
+}
+
+.div2 {
+  top: 10%;
+  left: 70%;
+}
+
+.div3 {
+  top: 70%;
+  left: -67%;
+}
