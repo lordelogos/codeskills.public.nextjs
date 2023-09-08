@@ -1,156 +1,35 @@
-.container {
-  min-height: 100vh;
-  min-height: 100svh;
+.section {
+  padding: 40px 0;
+  min-height: calc(100vh - 80px);
+  min-height: calc(100svh - 80px);
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
 }
 
-.banner {
-  min-height: calc(100vh - 200px);
-  min-height: calc(100svh - 200px);
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr 6fr;
+.nav {
+  position: absolute;
+  top: 40px;
+  left: 0;
 }
 
-.banner h1 {
-  margin: auto;
-  max-width: 30ch;
+.title {
+  max-width: 32ch;
   text-align: center;
 }
 
-.grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.community,
-.articles,
-.projects {
-  --bg: #000;
-  min-height: 140px;
-  padding: 20px 0;
-  position: relative;
-  overflow: hidden;
-  border: solid 1px;
-  border-radius: 6px;
-  transition: transform;
-  transition-duration: var(--link-transition-duration);
-  border-color: var(--bg);
-  background: var(--bg);
-  display: flex;
-  flex-direction: column;
-}
-
-.community {
-  --bg: #000;
-  grid-area: 1/1/3/2;
-}
-
-.articles {
-  --bg: var(--light-shade-black);
-}
-
-.projects {
-  --bg: var(--deep-accent);
-}
-
-.community:hover,
-.articles:hover,
-.projects:hover {
-  transform: scale(0.95);
-}
-
-.link {
-  padding: 0 20px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.link p {
-  font-size: 24px;
-}
-
-.marqee {
-  flex: 1;
+.links {
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: opacity;
-  transition-duration: var(--link-transition-duration);
-  opacity: 0;
-}
-
-.doodle {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  transform: scale(1);
-  opacity: 1;
-  transition: all;
-  transition-duration: var(--link-transition-duration);
-}
-
-.community:hover .marqee,
-.articles:hover .marqee,
-.projects:hover .marqee {
-  opacity: 1;
-}
-
-.community:hover .doodle,
-.articles:hover .doodle,
-.projects:hover .doodle {
-  transform: scale(0.2);
-  opacity: 0;
-}
-
-@media (pointer: coarse) {
-  .marqee {
-    display: none;
-  }
+  gap: 24px;
 }
 
 @media screen and (max-width: 1024px) {
   .title {
     font-size: 36px;
     line-height: 36px;
-  }
-
-  .doodle {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .banner {
-    min-height: calc(100vh - 140px);
-    min-height: calc(100svh - 140px);
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 12px;
-  }
-
-  .link p {
-    font-size: 16px;
-  }
-
-  .community {
-    --bg: #000;
-    grid-area: 1/1/1/1;
-  }
-
-  .doodle {
-    width: 40px;
-    height: 40px;
   }
 }

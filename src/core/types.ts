@@ -8,8 +8,6 @@ export type displayCard =
   | "collaboration"
   | "industry updates";
 
-export type HeroCard = "community" | "articles" | "projects";
-
 export type IconProps = {
   size?: number;
   className?: string;
