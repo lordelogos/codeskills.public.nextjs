@@ -1,23 +1,11 @@
-import { FAQs } from "@/components/faqs";
+import { PageContent } from "@/components/page-content";
 import styles from "./page.module.css";
-import { FuelSuccess } from "@/components/fuel-success";
-import { ShareInsights } from "@/components/share-insights";
-import { Skillset } from "@/components/skillset";
 import React from "react";
-import { Footer } from "@/components/footer";
-import { Hero } from "@/components/hero";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Hero />
-      <FuelSuccess />
-      <Skillset />
-      <ShareInsights />
-      <div className={styles.grid}>
-        <FAQs />
-        <Footer />
-      </div>
+      <PageContent />
     </main>
   );
 }
