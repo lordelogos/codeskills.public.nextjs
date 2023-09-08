@@ -40,3 +40,14 @@
     line-height: 36px;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .links {
+    flex-direction: column;
+  }
+}

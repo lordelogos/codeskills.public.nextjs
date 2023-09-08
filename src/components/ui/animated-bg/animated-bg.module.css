@@ -5,11 +5,11 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-attachment: fixed;
+  overflow: hidden;
 }
 
 .gradientDiv {
-  --borderWidth: 2px;
+  --borderWidth: 3px;
   position: absolute;
   top: 0%;
   left: 0%;
