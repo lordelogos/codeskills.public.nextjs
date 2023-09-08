@@ -23,6 +23,17 @@
   }
 }
 
+@media screen and (max-width: 640px) {
+  .container .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .container span {
+    font-size: 20px;
+  }
+}
+
 .container:hover span {
   color: var(--accent);
 }

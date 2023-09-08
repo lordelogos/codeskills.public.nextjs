@@ -39,3 +39,11 @@
     height: 384px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .container,
+  .img {
+    width: 238px;
+    height: 302px;
+  }
+}
