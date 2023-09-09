@@ -1,6 +1,6 @@
 "use client";
 
-import { siteLinks } from "@/core/site-config";
+import { routes } from "@/core/site-config";
 import Image, { StaticImageData } from "next/image";
 import { useMemo, useRef, FC } from "react";
 import styles from "./stacked-image.module.css";
@@ -56,7 +56,7 @@ export const StackedImageAnimation: FC<StackedImageAnimationProps> = ({
       })}
       <div className={styles.hoverLink}>
         <IconLink
-          href={siteLinks.communityForm}
+          href={routes.joinCommunity}
           label="Join the codeskills community"
         />
       </div>

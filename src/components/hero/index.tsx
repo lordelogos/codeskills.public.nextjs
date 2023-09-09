@@ -1,4 +1,4 @@
-import { siteLinks } from "@/core/site-config";
+import { routes, siteLinks } from "@/core/site-config";
 import { BrandIcon } from "@ui/brand-icon";
 import styles from "./hero.module.css";
 import { Link } from "@ui/link";
@@ -18,11 +18,11 @@ export const Hero = () => {
           our community
         </h1>
         <div className={styles.links}>
-          <Link href={siteLinks.communityForm} variant="accent">
+          <Link href={routes.joinCommunity} variant="accent">
             <span>Join our community</span>
             <ArrowLink />
           </Link>
-          <Link href={siteLinks.communityForm}>
+          <Link href={siteLinks.blog} target="_blank">
             <span>View blog</span>
             <ArrowLink />
           </Link>

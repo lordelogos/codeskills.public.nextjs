@@ -1,5 +1,10 @@
 import { Metadata } from "next";
 
+export const routes = {
+  home: "/",
+  joinCommunity: "/join-community",
+};
+
 // TODO: complete links
 export const siteLinks = {
   main: "https://codeskills.dev",
@@ -8,7 +13,6 @@ export const siteLinks = {
   discord: "https://discord.gg/9VNpMr9v3Y",
   blog: "https://blog.codeskills.dev/",
   whatsApp: "#",
-  communityForm: "#",
 };
 
 export const siteConfig: Metadata = {

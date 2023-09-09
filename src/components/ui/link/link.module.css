@@ -18,6 +18,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  font-weight: 500;
 }
 
 .vertical .text,
@@ -60,6 +61,7 @@
   background: transparent;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 16px 28px;
   text-transform: uppercase;
@@ -83,4 +85,20 @@
   color: #ffffff;
   border: 1px solid var(--accent);
   background: var(--deep-accent);
+}
+
+.button {
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.link.disabled:hover .vertical .hoverText,
+.link.disabled:hover .vertical .text,
+.link.disabled:hover .horizontal .hoverText,
+.link.disabled:hover .horizontal .text {
+  transform: none;
 }

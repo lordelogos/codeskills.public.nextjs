@@ -1,0 +1,61 @@
+.container {
+  width: 90%;
+  max-width: 472px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.branding {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.branding h2 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+.branding p {
+  color: var(--white-fade);
+  line-height: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn {
+  margin-top: 16px;
+  width: 100% !important;
+}
+
+.footer {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    margin-top: 44px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    max-width: max-content;
+    gap: 32px;
+  }
+
+  .branding h2 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}

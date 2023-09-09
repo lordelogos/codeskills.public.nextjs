@@ -1,4 +1,4 @@
-import { siteLinks } from "@/core/site-config";
+import { routes, siteLinks } from "@/core/site-config";
 import { BrandIcon } from "@ui/brand-icon";
 import { ArrowLink } from "@ui/icons/arrow-link";
 import { Discord } from "@ui/icons/discord";
@@ -20,7 +20,7 @@ export const Footer = () => {
           Dive into the world of web development as we uncover its mysteries
           together
         </p>
-        <Link href={siteLinks.communityForm} variant="accent">
+        <Link href={routes.joinCommunity} variant="accent">
           <span>Join our community</span>
           <ArrowLink />
         </Link>

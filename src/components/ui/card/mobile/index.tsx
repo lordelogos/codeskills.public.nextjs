@@ -4,7 +4,7 @@ import { CardProps } from "@/core/types";
 import { FC } from "react";
 import Image from "next/image";
 import styles from "./mobile.module.css";
-import { siteLinks } from "@/core/site-config";
+import { routes } from "@/core/site-config";
 
 export const CardMobile: FC<CardProps> = ({
   icon: Icon,
@@ -26,7 +26,7 @@ export const CardMobile: FC<CardProps> = ({
       <div className={styles.cardBody}>
         <p className={styles.description}>{description}</p>
         <Link
-          href={siteLinks.communityForm}
+          href={routes.joinCommunity}
           aria-label="join the codeskills community"
           tabIndex={state === "open" ? 0 : -1}
         >

@@ -5,13 +5,13 @@ import { Minus } from "@ui/icons/minus";
 import { Plus } from "@ui/icons/plus";
 import { FC, useEffect, useRef, useState } from "react";
 import styles from "./faqs.module.css";
-import { siteLinks } from "@/core/site-config";
+import { routes, siteLinks } from "@/core/site-config";
 
 const faqCards: FAQCard[] = [
   {
     question: "How can I join this community?",
     answer: `Becoming a part of our community is a breeze, 
-      <a tabindex="-1" href=${siteLinks.communityForm}>Click here</a>
+      <a tabindex="-1" href=${routes.joinCommunity}>Click here</a>
      and fill the form to complete the registration process.`,
   },
   {
