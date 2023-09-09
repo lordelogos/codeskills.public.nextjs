@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.0.4",
     "@studio-freight/lenis": "^1.0.22",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",

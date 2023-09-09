@@ -5,9 +5,12 @@ import styles from "./join-form.module.css";
 import { Button } from "@ui/link";
 import { BrandIcon } from "@ui/brand-icon";
 import { ChangeEvent, FormEventHandler, useRef, useState } from "react";
+import { JoinSuccessModal } from "@ui/join-success";
+import { useModalUtils } from "@/core/hooks";
 
 export const JoinCommunityForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const { toggle, visible, open } = useModalUtils();
   const [activity, showActivity] = useState(false);
   const [formData, setFormData] = useState({
     fullname: "",
@@ -68,63 +71,67 @@ export const JoinCommunityForm = () => {
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    showActivity(true);
-    if (validateForm()) {
-      alert("Valid");
-    }
-    showActivity(false);
+    open();
+    // showActivity(true);
+    // if (validateForm()) {
+    //   open();
+    // }
+    // showActivity(false);
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.branding}>
-        <h2>Be part of our community</h2>
-        <p>
-          Get access to resources, support, updates and opportunities to improve
-          your web development skills.
-        </p>
+    <>
+      <div className={styles.container}>
+        <div className={styles.branding}>
+          <h2>Be part of our community</h2>
+          <p>
+            Get access to resources, support, updates and opportunities to
+            improve your web development skills.
+          </p>
+        </div>
+        <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
+          <Input
+            label="Full Name"
+            type="text"
+            placeholder="john doe"
+            name="fullname"
+            value={formData.fullname}
+            onChange={handleChange}
+            error={errors.fullname}
+          />
+          <Input
+            type="email"
+            label="Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            error={errors.email}
+            placeholder="username@email.com"
+          />
+          <Input
+            type="text"
+            label="Github Profile Link"
+            value={formData.github}
+            onChange={handleChange}
+            error={errors.github}
+            name="github"
+            placeholder="github.com/username"
+          />
+          <Button
+            className={styles.btn}
+            variant="accent"
+            type="submit"
+            showActivity={activity}
+            disabled={activity}
+          >
+            Join our community
+          </Button>
+        </form>
+        <div className={styles.footer}>
+          <BrandIcon />
+        </div>
       </div>
-      <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
-        <Input
-          label="Full Name"
-          type="text"
-          placeholder="john doe"
-          name="fullname"
-          value={formData.fullname}
-          onChange={handleChange}
-          error={errors.fullname}
-        />
-        <Input
-          type="email"
-          label="Email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          error={errors.email}
-          placeholder="username@email.com"
-        />
-        <Input
-          type="text"
-          label="Github Profile Link"
-          value={formData.github}
-          onChange={handleChange}
-          error={errors.github}
-          name="github"
-          placeholder="github.com/username"
-        />
-        <Button
-          className={styles.btn}
-          variant="accent"
-          type="submit"
-          showActivity={activity}
-          disabled={activity}
-        >
-          Join our community
-        </Button>
-      </form>
-      <div className={styles.footer}>
-        <BrandIcon />
-      </div>
-    </div>
+      <JoinSuccessModal toggleVisibility={toggle} visible={visible} />
+    </>
   );
 };

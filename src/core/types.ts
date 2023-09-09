@@ -1,6 +1,15 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ComponentType } from "react";
 
+export type Fn<T = unknown> = (...args: unknown[]) => T;
+
+export type ModalActions = {
+  visible: boolean;
+  open: Fn;
+  close: () => Promise<void>;
+  toggle: Fn;
+};
+
 export type displayCard =
   | "education"
   | "support"
@@ -37,3 +46,7 @@ export type FAQCard = {
   question: string;
   answer: string | TrustedHTML;
 };
+
+export type KeyboardKey = KeyboardEvent["key"];
+export type ConfigOptions = { event?: "keydown" | "keyup" | "keypress" };
+export type Handler = (event: KeyboardEvent) => void;
