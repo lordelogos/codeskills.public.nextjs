@@ -89,11 +89,15 @@ export const JoinCommunityForm = () => {
     showActivity(true);
     if (validateForm()) {
       try {
-        await createUser(formData);
-        open();
-        resetForm();
+        const res = await createUser(formData);
+        if (res.status === 409) {
+          setErrors({ ...errors, email: "User with email already exists" });
+        } else {
+          open();
+          resetForm();
+        }
       } catch (err) {
-        // handle err.msg
+        console.log((err as Error).message);
       }
     }
     showActivity(false);

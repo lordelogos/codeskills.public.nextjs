@@ -14,8 +14,15 @@ export async function createUser({ name, email, github }: User) {
   });
 
   if (existingUser) {
-    throw new Error("User already exists");
+    return {
+      status: 409,
+      message: "User already exists",
+    };
   } else {
     await db.insert(user).values(newUser);
+    return {
+      status: 201,
+      message: "User created successfully",
+    };
   }
 }
