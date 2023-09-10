@@ -38,4 +38,4 @@ next-env.d.ts
 .env
 
 # db migrations
-/src/lib/db/migrations
+/src/lib/drizzle/migrations

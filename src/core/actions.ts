@@ -1,7 +1,7 @@
 "use server";
 
-import { db } from "@/lib/db";
-import { user } from "@/lib/db/schema";
+import { db } from "@/lib/drizzle";
+import { user } from "@/lib/drizzle/schema";
 import { User } from "./types";
 import { normalizeGitHubURL } from "./utils";
 import { eq } from "drizzle-orm";

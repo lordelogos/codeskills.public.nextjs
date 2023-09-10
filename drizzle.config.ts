@@ -6,8 +6,8 @@ if (!process.env.DATABASE_URL) {
 }
 
 export default {
-  schema: "./src/lib/db/schema.ts",
-  out: "./src/lib/db/migrations",
+  schema: "./src/lib/drizzle/schema.ts",
+  out: "./src/lib/drizzle/migrations",
   dbCredentials: {
     connectionString: process.env.DATABASE_URL,
   },
