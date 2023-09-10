@@ -7,19 +7,21 @@ import { BrandIcon } from "@ui/brand-icon";
 import { ChangeEvent, FormEventHandler, useRef, useState } from "react";
 import { JoinSuccessModal } from "@ui/join-success";
 import { useModalUtils } from "@/core/hooks";
+import { User } from "@/core/types";
+import { createUser } from "@/core/actions";
 
 export const JoinCommunityForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const { toggle, visible, open } = useModalUtils();
   const [activity, showActivity] = useState(false);
-  const [formData, setFormData] = useState({
-    fullname: "",
+  const [formData, setFormData] = useState<User>({
+    name: "",
     email: "",
     github: "",
   });
 
-  const [errors, setErrors] = useState({
-    fullname: "",
+  const [errors, setErrors] = useState<User>({
+    name: "",
     email: "",
     github: "",
   });
@@ -42,17 +44,17 @@ export const JoinCommunityForm = () => {
      */
     if (
       formData.email &&
-      formData.fullname &&
+      formData.name &&
       formData.github &&
       patterns.email.test(formData.email) &&
       patterns.github.test(formData.github)
     ) {
       return true;
     } else {
-      const errors = { fullname: "", email: "", github: "" };
+      const errors = { name: "", email: "", github: "" };
 
-      if (!formData.fullname) {
-        errors.fullname = "Please enter your full name";
+      if (!formData.name) {
+        errors.name = "Please enter your full name";
       }
 
       if (!formData.email || !patterns.email.test(formData.email)) {
@@ -69,14 +71,32 @@ export const JoinCommunityForm = () => {
     }
   };
 
-  const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+  const resetForm = (): void => {
+    setFormData({
+      name: "",
+      email: "",
+      github: "",
+    });
+    setErrors({
+      name: "",
+      email: "",
+      github: "",
+    });
+  };
+
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    open();
-    // showActivity(true);
-    // if (validateForm()) {
-    //   open();
-    // }
-    // showActivity(false);
+    showActivity(true);
+    if (validateForm()) {
+      try {
+        await createUser(formData);
+        open();
+        resetForm();
+      } catch (err) {
+        // handle err.msg
+      }
+    }
+    showActivity(false);
   };
 
   return (
@@ -94,10 +114,10 @@ export const JoinCommunityForm = () => {
             label="Full Name"
             type="text"
             placeholder="john doe"
-            name="fullname"
-            value={formData.fullname}
+            name="name"
+            value={formData.name}
             onChange={handleChange}
-            error={errors.fullname}
+            error={errors.name}
           />
           <Input
             type="email"

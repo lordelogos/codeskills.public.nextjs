@@ -47,6 +47,8 @@ export type FAQCard = {
   answer: string | TrustedHTML;
 };
 
-export type KeyboardKey = KeyboardEvent["key"];
-export type ConfigOptions = { event?: "keydown" | "keyup" | "keypress" };
-export type Handler = (event: KeyboardEvent) => void;
+export type User = {
+  name: string;
+  email: string;
+  github: string;
+};

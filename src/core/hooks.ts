@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { ConfigOptions, Fn, Handler, KeyboardKey, ModalActions } from "./types";
+import { Fn, ModalActions } from "./types";
 
 export function useMediaQuery() {
   const [device, setDevice] = useState<"mobile" | "tablet" | "desktop" | null>(
@@ -86,28 +86,3 @@ export function useModalUtils(
 
   return actions;
 }
-
-export const useKey = (
-  keyOrKeys: KeyboardKey | Array<KeyboardKey>,
-  handler: Handler,
-  options?: ConfigOptions
-) => {
-  useEffect(() => {
-    const keys = (Array.isArray(keyOrKeys) ? keyOrKeys : [keyOrKeys]).map((o) =>
-      o.toLowerCase()
-    );
-    const evt = options?.event ?? "keyup";
-
-    const eventHandler = (e: KeyboardEvent) => {
-      if (!keys.includes(e.key.toLowerCase())) return;
-
-      handler(e);
-    };
-
-    document.addEventListener(evt, eventHandler);
-
-    return () => {
-      document.removeEventListener(evt, eventHandler);
-    };
-  }, [handler, keyOrKeys, options?.event]);
-};

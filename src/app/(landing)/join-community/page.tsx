@@ -20,6 +20,7 @@ const JoinCommunity = () => {
       </div>
       <div className={styles.form}>
         <Image
+          priority={false}
           src={joinCommunityImg}
           alt="Join the codeskills community"
           className={styles.img}

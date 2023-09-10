@@ -1,7 +1,6 @@
 import { FC, ReactNode } from "react";
 import styles from "./modal.module.css";
 import { Fn } from "@/core/types";
-import { useKey } from "@/core/hooks";
 import * as Dialog from "@radix-ui/react-dialog";
 
 interface ModalProps {
@@ -15,12 +14,6 @@ export const Modal: FC<ModalProps> = ({
   toggleVisibility,
   children,
 }) => {
-  useKey("Escape", () => {
-    if (visible) {
-      toggleVisibility();
-    }
-  });
-
   return (
     <Dialog.Root open={visible} onOpenChange={toggleVisibility}>
       <Dialog.Portal>
