@@ -5,6 +5,7 @@ import { user } from "@/lib/drizzle/schema";
 import { User } from "./types";
 import { normalizeGitHubURL } from "./utils";
 import { eq } from "drizzle-orm";
+import { resend } from "@/lib/resend";
 
 export async function createUser({ name, email, github }: User) {
   const newUser = { name, email, github: normalizeGitHubURL(github) };
@@ -25,4 +26,13 @@ export async function createUser({ name, email, github }: User) {
       message: "User created successfully",
     };
   }
+}
+
+export async function sendEmail({ name, email }: User) {
+  await resend.emails.send({
+    from: process.env.EMAIL_FROM_ADDRESS ?? "",
+    to: [email],
+    subject: "",
+    text: "Welcome to Codeskills community!",
+  });
 }
