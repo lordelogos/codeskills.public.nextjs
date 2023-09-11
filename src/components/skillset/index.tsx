@@ -10,6 +10,7 @@ import { StackedImageAnimation } from "@ui/stacked-image";
 import { useState } from "react";
 import uiUx from "@static/ui-ux.jpg";
 import styles from "./skillset.module.css";
+import { routes } from "@/core/site-config";
 
 const DisplayCards: Array<SkillsetCardProps> = [
   {
@@ -46,7 +47,7 @@ export const Skillset = () => {
             Our members enjoy benefits that empower them to excel in web
             development
           </p>
-          <Link href="#">
+          <Link href={routes.joinCommunity}>
             <span>Join our community</span>
             <ArrowLink />
           </Link>

@@ -16,6 +16,7 @@ export const IconLink = ({
   return (
     <Link
       href={href}
+      target="_blank"
       aria-label={label}
       className={`${styles.cta} ${className}`}
       hoverDirection="horizontal"

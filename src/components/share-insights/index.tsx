@@ -19,7 +19,7 @@ export const ShareInsights = () => {
             Gain knowledge, stay current, and get inspired by our diverse
             articles.
           </p>
-          <Link href={siteLinks.blog}>
+          <Link href={siteLinks.blog} target="_blank">
             <span>View blog</span>
             <ArrowLink />
           </Link>
@@ -47,7 +47,7 @@ export const ShareInsights = () => {
         </a>
         <div className={styles.gridItem4}>
           <div>
-            <p>Over 20+ articles</p>
+            <p>Over 30+ articles</p>
             <h3>See all articles</h3>
           </div>
           <IconLink
