@@ -28,9 +28,13 @@ export async function createUser({ name, email, github }: User) {
   }
 }
 
-export async function sendEmail({ name, email }: User) {
+export async function sendWelcomeEmail({ name, email }: User) {
+  if (!process.env.EMAIL_FROM_ADDRESS) {
+    throw new Error("EMAIL_FROM_ADDRESS not set");
+  }
+
   await resend.emails.send({
-    from: process.env.EMAIL_FROM_ADDRESS ?? "",
+    from: process.env.EMAIL_FROM_ADDRESS,
     to: [email],
     subject: "",
     text: "Welcome to Codeskills community!",
