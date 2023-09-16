@@ -1,14 +1,14 @@
 "use client";
 
 import { Input } from "@ui/input";
-import styles from "./join-form.module.css";
 import { Button } from "@ui/link";
 import { BrandIcon } from "@ui/brand-icon";
 import { ChangeEvent, FormEventHandler, useRef, useState } from "react";
 import { JoinSuccessModal } from "@ui/join-success";
 import { useModalUtils } from "@/core/hooks";
 import { User } from "@/core/types";
-import { createUser } from "@/core/actions";
+import { createUser, sendWelcomeEmail } from "@/core/actions";
+import styles from "./join-form.module.css";
 
 export const JoinCommunityForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -91,8 +91,19 @@ export const JoinCommunityForm = () => {
       try {
         const res = await createUser(formData);
         if (res.status === 409) {
-          setErrors({ ...errors, email: "User with email already exists" });
+          if (res.key === "email") {
+            setErrors({
+              ...errors,
+              email: "A user with this email already exists",
+            });
+          } else {
+            setErrors({
+              ...errors,
+              github: "A user with github already exists",
+            });
+          }
         } else {
+          sendWelcomeEmail(formData);
           open();
           resetForm();
         }

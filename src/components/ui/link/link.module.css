@@ -83,7 +83,7 @@
 
 .accent {
   color: #ffffff;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--deep-accent);
   background: var(--deep-accent);
 }
 

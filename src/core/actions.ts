@@ -4,19 +4,21 @@ import { db } from "@/lib/drizzle";
 import { user } from "@/lib/drizzle/schema";
 import { User } from "./types";
 import { normalizeGitHubURL } from "./utils";
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import { resend } from "@/lib/resend";
+import WelcomeEmailTemplate from "@/lib/react-email/welcome-template";
 
 export async function createUser({ name, email, github }: User) {
   const newUser = { name, email, github: normalizeGitHubURL(github) };
 
   const existingUser = await db.query.user.findFirst({
-    where: eq(user.email, email),
+    where: sql`${user.email} = ${email} OR ${user.github} = ${newUser.github}`,
   });
 
   if (existingUser) {
     return {
       status: 409,
+      key: existingUser.email === email ? "email" : "github",
       message: "User already exists",
     };
   } else {
@@ -36,7 +38,7 @@ export async function sendWelcomeEmail({ name, email }: User) {
   await resend.emails.send({
     from: process.env.EMAIL_FROM_ADDRESS,
     to: [email],
-    subject: "",
-    text: "Welcome to Codeskills community!",
+    subject: "Welcome to Codeskills community!",
+    react: WelcomeEmailTemplate({ name }),
   });
 }

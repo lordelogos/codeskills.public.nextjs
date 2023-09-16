@@ -10,8 +10,12 @@ export const siteLinks = {
   main: "https://codeskills.dev",
   githubPersonal: "https://github.com/lordelogos",
   githubOrg: "https://github.com/codeskills-dev",
+  twitterPersonal: "https://twitter.com/pauloe_me",
   discord: "https://discord.gg/9VNpMr9v3Y",
   blog: "https://blog.codeskills.dev/",
+  gitAndGithubGuide:
+    "https://blog.codeskills.dev/posts/git-and-github-basics-a-beginners-guide",
+  starterRepo: "https://github.com/codeskills-dev/bootcamp-starter",
   whatsApp: "#",
 };
 
