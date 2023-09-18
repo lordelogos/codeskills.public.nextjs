@@ -4,11 +4,12 @@
 </div>
 
 <div align="center">
-  <a href="https://codeskills.dev">codeskills.dev</a>
+  <a href="https://codeskills.dev">www.codeskills.dev</a>
 </div>
 
-![codeskills.public.nextjs](https://socialify.git.ci/lordelogos/codeskills.public.nextjs/image?issues=1&language=1&name=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto)
+<hr />
 
+![codeskills.public.nextjs](https://socialify.git.ci/lordelogos/codeskills.public.nextjs/image?issues=1&language=1&name=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto)
 This is the official codeskills website.
 
 ## 💻 Tech Stack
@@ -41,7 +42,7 @@ All commands are run from the root of the project, from a terminal:
 
 ---
 
-## Stats
+## 📊 Stats
 
 ![Alt](https://repobeats.axiom.co/api/embed/34b47db48d070efd504b4e4298ec04b65356fe20.svg "Repobeats analytics image")
 
