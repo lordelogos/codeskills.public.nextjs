@@ -2,6 +2,7 @@ import { siteConfig } from "@/core/site-config";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import GoogleAnalytics from "@/components/analytics/google";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        {children}
+        <GoogleAnalytics />
+      </body>
     </html>
   );
 }
