@@ -17,13 +17,13 @@ This is the official codeskills website.
 **Main Framework** - [Next 13 (App-router)](https://nextjs.org/docs)  
 **Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
 **Component Framework** - [ReactJS](https://reactjs.org/)  
-**Styling** - CSS Modules
-**UI/UX** - [Figma](https://www.figma.com/file/8xAVGKZy2lTjeQBb7JzeRA/Codeskills?type=design&node-id=0-1&mode=design&t=5tuTCmDvL0uw6Q8u-0)
-**Linting** - [ESLint](https://eslint.org)
-**ORM:** [Drizzle ORM](https://orm.drizzle.team)
-**Email:** [Resend](https://resend.com)
-**Email template:** [React Email](https://react.email)
-**Database:** [Planetscale](https://planetscale.com/)
+**Styling** - CSS Modules  
+**UI/UX** - [Figma](https://www.figma.com/file/8xAVGKZy2lTjeQBb7JzeRA/Codeskills?type=design&node-id=0-1&mode=design&t=5tuTCmDvL0uw6Q8u-0)  
+**Linting** - [ESLint](https://eslint.org)  
+**ORM:** [Drizzle ORM](https://orm.drizzle.team)  
+**Email:** [Resend](https://resend.com)  
+**Email template:** [React Email](https://react.email)  
+**Database:** [Planetscale](https://planetscale.com/)  
 
 ## 🧞 Commands
 
