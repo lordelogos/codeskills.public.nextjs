@@ -11,7 +11,7 @@ const faqCards: FAQCard[] = [
   {
     question: "How can I join this community?",
     answer: `Becoming a part of our community is a breeze, 
-      <a tabindex="-1" href=${routes.joinCommunity}>Click here</a>
+      <a tabindex="-1" href=${routes.joinCommunity}>Click here to get started</a>
      and fill the form to complete the registration process.`,
   },
   {
