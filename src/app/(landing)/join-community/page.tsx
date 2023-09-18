@@ -3,6 +3,11 @@ import styles from "./join-community.module.css";
 import Image from "next/image";
 import joinCommunityImg from "@static/join-community.jpg";
 import { JoinCommunityForm } from "@/components/join-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Join Codeskills",
+};
 
 const JoinCommunity = () => {
   return (

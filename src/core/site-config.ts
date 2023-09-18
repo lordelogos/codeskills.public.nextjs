@@ -5,7 +5,6 @@ export const routes = {
   joinCommunity: "/join-community",
 };
 
-// TODO: complete links
 export const siteLinks = {
   main: "https://codeskills.dev",
   githubPersonal: "https://github.com/lordelogos",
@@ -16,11 +15,14 @@ export const siteLinks = {
   gitAndGithubGuide:
     "https://blog.codeskills.dev/posts/git-and-github-basics-a-beginners-guide",
   starterRepo: "https://github.com/codeskills-dev/bootcamp-starter",
-  whatsApp: "#",
+  whatsApp: "https://chat.whatsapp.com/IiJNl8wMiAF3G3Tzhz31dl",
 };
 
 export const siteConfig: Metadata = {
-  title: "Codeskills - Web Development Community",
+  title: {
+    default: `Codeskills - Web Development Community`,
+    template: `%s - Web Development Community`,
+  },
   description:
     "Join the CodeSkills community for web development learning, networking, events, and more. Explore coding tutorials, programming resources, and connect with fellow developers.",
   authors: [{ name: "Paul Ehikhuemen", url: siteLinks.githubPersonal }],
