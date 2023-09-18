@@ -27,7 +27,7 @@ export const CardMobile: FC<CardProps> = ({
         <p className={styles.description}>{description}</p>
         <Link
           href={routes.joinCommunity}
-          aria-label="join our community"
+          aria-label="Join our community"
           tabIndex={state === "open" ? 0 : -1}
         >
           <span>Join our community</span>

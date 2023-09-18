@@ -49,6 +49,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
             {children}
           </div>
           <div
+            aria-hidden={"true"}
             className={`${styles.hoverText} ${
               type === "arrow" ? styles.arrow : ""
             }`}
