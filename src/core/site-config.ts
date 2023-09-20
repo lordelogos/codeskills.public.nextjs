@@ -15,7 +15,7 @@ export const siteLinks = {
   gitAndGithubGuide:
     "https://blog.codeskills.dev/posts/git-and-github-basics-a-beginners-guide",
   starterRepo: "https://github.com/codeskills-dev/bootcamp-starter",
-  whatsApp: "https://chat.whatsapp.com/IiJNl8wMiAF3G3Tzhz31dl",
+  whatsApp: "https://chat.whatsapp.com/IrgJw9NPEIeEOreaGOQaM1",
 };
 
 export const siteConfig: Metadata = {
