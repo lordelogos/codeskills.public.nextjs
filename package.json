@@ -10,9 +10,11 @@
     "migrations:generate": "drizzle-kit generate:mysql",
     "migrations:push": "drizzle-kit push:mysql",
     "migrations:drop": "drizzle-kit drop",
-    "dev:db": "drizzle-kit studio"
+    "dev:db": "drizzle-kit studio",
+    "email:preview": "email preview ./src/lib/jsx-email"
   },
   "dependencies": {
+    "@jsx-email/all": "^3.0.1",
     "@planetscale/database": "1.11.0",
     "@radix-ui/react-dialog": "1.0.4",
     "@react-email/components": "0.0.7",
@@ -32,6 +34,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@jsx-email/cli": "^3.0.1",
     "drizzle-kit": "0.19.13",
     "encoding": "0.1.13"
   }
