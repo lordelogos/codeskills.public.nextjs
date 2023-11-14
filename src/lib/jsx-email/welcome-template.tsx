@@ -1,4 +1,5 @@
-import { siteLinks } from "@/core/site-config";
+// @ts-ignore
+import { siteLinks } from "../../core/site-config";
 import {
   Body,
   Container,
@@ -10,7 +11,7 @@ import {
   Preview,
   Section,
   Text,
-} from "@react-email/components";
+} from "@jsx-email/all";
 import React from "react";
 
 type WelcomeEmailTemplateProps = {
@@ -119,6 +120,8 @@ const WelcomeEmailTemplate = ({ name }: WelcomeEmailTemplateProps) => {
     </Html>
   );
 };
+
+WelcomeEmailTemplate.PreviewProps = { name: "Paul" };
 
 export default WelcomeEmailTemplate;
 
