@@ -7,7 +7,7 @@ import { normalizeGitHubURL } from "./utils";
 import { sql } from "drizzle-orm";
 import { resend } from "@/lib/resend";
 import WelcomeEmailTemplate from "@/lib/jsx-email/welcome-template";
-import { render } from "@jsx-email/all";
+import { render } from "@jsx-email/render";
 
 export async function createUser({ name, email, github }: User) {
   const newUser = { name, email, github: normalizeGitHubURL(github) };
