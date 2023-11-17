@@ -22,7 +22,7 @@ This is the official codeskills website.
 **Linting** - [ESLint](https://eslint.org)  
 **ORM:** [Drizzle ORM](https://orm.drizzle.team)  
 **Email:** [Resend](https://resend.com)  
-**Email template:** [React Email](https://react.email)  
+**Email template:** [JSX Email](https://jsx.email)  
 **Database:** [Planetscale](https://planetscale.com/)  
 
 ## 🧞 Commands
