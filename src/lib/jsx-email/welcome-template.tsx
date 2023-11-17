@@ -1,16 +1,14 @@
-import { siteLinks } from "@/core/site-config";
-import {
-  Body,
-  Container,
-  Head,
-  Heading,
-  Hr,
-  Html,
-  Link,
-  Preview,
-  Section,
-  Text,
-} from "@react-email/components";
+import { siteLinks } from "../../core/site-config";
+import { Preview } from "@jsx-email/preview";
+import { Body } from "@jsx-email/body";
+import { Html } from "@jsx-email/html";
+import { Head } from "@jsx-email/head";
+import { Heading } from "@jsx-email/heading";
+import { Container } from "@jsx-email/container";
+import { Section } from "@jsx-email/section";
+import { Text } from "@jsx-email/text";
+import { Hr } from "@jsx-email/hr";
+import { Link } from "@jsx-email/link";
 import React from "react";
 
 type WelcomeEmailTemplateProps = {
@@ -119,6 +117,8 @@ const WelcomeEmailTemplate = ({ name }: WelcomeEmailTemplateProps) => {
     </Html>
   );
 };
+
+WelcomeEmailTemplate.PreviewProps = { name: "Paul" };
 
 export default WelcomeEmailTemplate;
 

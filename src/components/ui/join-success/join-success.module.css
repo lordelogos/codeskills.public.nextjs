@@ -45,6 +45,7 @@
 
 .container .img {
   width: 132px;
+  height: auto;
   margin-bottom: 64px;
 }
 

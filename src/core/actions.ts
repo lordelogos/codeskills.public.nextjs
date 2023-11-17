@@ -4,9 +4,10 @@ import { db } from "@/lib/drizzle";
 import { user } from "@/lib/drizzle/schema";
 import { User } from "./types";
 import { normalizeGitHubURL } from "./utils";
-import { eq, sql } from "drizzle-orm";
+import { sql } from "drizzle-orm";
 import { resend } from "@/lib/resend";
-import WelcomeEmailTemplate from "@/lib/react-email/welcome-template";
+import WelcomeEmailTemplate from "@/lib/jsx-email/welcome-template";
+import { render } from "@jsx-email/render";
 
 export async function createUser({ name, email, github }: User) {
   const newUser = { name, email, github: normalizeGitHubURL(github) };
@@ -35,10 +36,12 @@ export async function sendWelcomeEmail({ name, email }: User) {
     throw new Error("EMAIL_FROM_ADDRESS not set");
   }
 
+  const emailHtml = await render(WelcomeEmailTemplate({ name }));
+
   await resend.emails.send({
     from: process.env.EMAIL_FROM_ADDRESS,
     to: [email],
     subject: "Welcome to Codeskills community!",
-    react: WelcomeEmailTemplate({ name }),
+    html: emailHtml,
   });
 }
