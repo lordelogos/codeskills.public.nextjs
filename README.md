@@ -1,6 +1,6 @@
 <div align="center">
     <h1 align="center">Codeskills</h1>
-    <h5>Elevate Your Web Development Journey with CodeSkills Community</h5>
+    <h5>Elevate Your Web Development Journey With CodeSkills Community</h5>
 </div>
 
 <div align="center">
