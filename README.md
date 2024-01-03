@@ -10,7 +10,7 @@
 <hr />
 
 ![codeskills.public.nextjs](https://socialify.git.ci/lordelogos/codeskills.public.nextjs/image?issues=1&language=1&name=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto)
-This is the official Codeskills website.
+This is the Official Codeskills website.
 
 ## 💻 Tech Stack
 
